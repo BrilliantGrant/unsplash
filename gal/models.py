@@ -20,10 +20,10 @@ class Images(models.Model):
 	descripton = models.TextField()
     location = models.ForeignKey(Location, null=True)
     name = models.CharField(max_length=30)
-    image = models.ImageField(upload_to = 'images/', null = True)
+    image = models.ImageField(upload_to = 'images/', null = True, blank=True)
     time = models.DateTimeField(auto_now_add=True, null=True)
-   
-    # category = models.ManyToManyField(categories)
+    category = models.ManyToManyField(category)
+
     def save_image(self):
         self.save()
 
@@ -34,3 +34,16 @@ class Images(models.Model):
     def search_by_title(cls, search_term):
         gallery = cls.objects.filter(descripton__icontains=search_term)
         return gallery
+
+
+class Category(models.Model):
+    category_name = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.category_name
+
+    def save_category(self):
+        self.save()
+
+    def delete_category(self):
+        self.delete()
