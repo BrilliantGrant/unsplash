@@ -1,1 +1,14 @@
-index.html
+{% extends 'base.html' %}
+{% block content %}
+{{block.super}}
+<div class="container">
+<ul class="nav nav-tabs nav-justified">
+    <li class="active"><a href="#all" data-toggle="tab">Home</a></li>
+    <li><a href="#animal" data-toggle="tab">Animals</a></li>
+    <li><a href="#nature" data-toggle="tab">Nature</a></li>
+    <li><a href="#art" data-toggle="tab">Art</a></li>
+    <li><a href="#architecture" data-toggle="tab">Architecture</a></li>
+    <li><a href="#photography" data-toggle="tab">Photography</a></li>
+</ul>
+<div class="tab-content">
+<div id="all" class="row tab-pane fade in active">

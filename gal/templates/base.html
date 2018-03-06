@@ -4,13 +4,14 @@
 <html>
 
 <head>
-  <meta charset="utf-8"> {% if title %}
+  <meta charset="utf-8"> 
+  {% if title %}
   <title>Unsplash </title>
   {% else %}
   <title> Unsplash</title>
   {% endif %}
-   {% block styles %}
-    {% bootstrap_css %}
+  {% block styles %}
+  {% bootstrap_css %}
      <link href="https://fonts.googleapis.com/css?family=Chewy|Monoton|Cabin+Sketch|Concert+One|Arima+Madurai" rel="stylesheet"> 
   <link rel="stylesheet" href="{% static 'css/gallery.css'%}">
  
@@ -29,7 +30,8 @@
   <script type="text/javascript">
 
   </script>
-   {% bootstrap_javascript %}{% endblock %}
+   {% bootstrap_javascript %}
+   {% endblock %}
 </body>
 
 </html>
