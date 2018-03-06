@@ -1,4 +1,4 @@
-from django.shortcuts import render,Http404
-from .models import Images
+from django.shortcuts import render,HttpResponse
+from .models import Category,Location,Images
 
 # Create your views here.
