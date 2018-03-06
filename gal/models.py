@@ -22,7 +22,7 @@ class Images(models.Model):
 	name = models.CharField(max_length=30)
 	image = models.ImageField(upload_to = 'images/', null = True, blank=True)
 	time = models.DateTimeField(auto_now_add=True, null=True)
-	# category = models.ManyToManyField(Category)
+	category = models.ManyToManyField(Category)
 
 	def save_image(self):
 		self.save()
