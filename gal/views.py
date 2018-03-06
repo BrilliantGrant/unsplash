@@ -7,6 +7,11 @@ def index (request):
     return render(request,'index.html',{"images":images})
 
 
+def image(request, image_id):
+    image = Images.objects.get(id=image_id)
+    return render(request, 'image.html', {'image':image})
+
+
 def search_results(request):
     if 'images' in request.GET and request.GET['images']:
         search_term = request.GET.get('images')
