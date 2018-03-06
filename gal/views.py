@@ -5,3 +5,14 @@ from .models import Category,Location,Images
 def index (request):
     images = Image.get_images()
     return render(request,'index.html',{"images":images})
+
+
+def search_results(request):
+    if 'images' in request.GET and request.GET['images']:
+        search_term = request.GET.get('images')
+        searched_image = Images.search_by_title(search_term)
+        message = f"{search_term}"
+        return render(request, 'search.html', {"message":message, "images":searched_image})
+    else:
+        message = 'You haven\'t searched for any images.'
+        return render(request, 'search.html', {"message":message})
