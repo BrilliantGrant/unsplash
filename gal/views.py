@@ -1,5 +1,5 @@
 from django.shortcuts import render,HttpResponse
-from .models import Images
+from .models import Images,Category
 from django.template.context_processors import request
 
 # Create your views here.
