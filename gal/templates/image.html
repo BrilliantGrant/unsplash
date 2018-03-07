@@ -2,10 +2,10 @@
 {%extends 'base.html'%}
 {% block content %} 
 {{ block.super}}
-<div class="images">
+<!-- <div class="images">
     <div class="image">
   <!-- Looping through news   -->
-  <div class="container">
+<!--   <div class="container">
     <div class="row">
         <div class="col-md-6">
             <img src="{{image.image.url}}" class="img-responsive img-thumbnail" style="width: 300px  ; height: 300px" alt="">
@@ -21,235 +21,138 @@
 </div>
 
 
-<body>
+<body> -->
 
-  <div id="container">
-    <div id="content">
+ -->
 
-      <div class="circle">
-       <img src="{{image.image.url}}" class="img-responsive img-thumbnail" style="width: 300px  ; height: 300px" alt="">
-        <div class="header">
-          <h1>{{image.name}}</h1></div>
-        <div class="text">
-         <p>{{image.descripton}}</p>
-          <p>{{image.location}}</p>
-        </div>
-      </div>
-
-      <div class="circle-1">
-        <img src="http://www.web3d.org/x3d/content/examples/Basic/UniversalMediaPanoramas/horizon_3_back.jpg">
-        <div class="header-1">
-          <h3>{{image.name}}<br>{{image.name}}</h3></div>
-        <div class="text-1">
-          <h3>Location</h3>
-          <p> <p>{{image.location}}</p>
-            
-            <br>elit.</p>
-        </div>
-      </div>
-
-      <div class="circle-2">
-        <img src="http://www.web3d.org/x3d/content/examples/Basic/UniversalMediaPanoramas/horizon_3_back.jpg">
-        <div class="text-2">
-          <h3>Description</h3>
-          <p>{{image.descripton}}</p>
-        </div>
-      </div>
-
-    </div>
+<figure class="snip1218">
+  <div class="image"><img src="{{image.image.url}}" alt="sample70"/>
+    <p>{{image.descripton}}</p>
+    <p>{{image.upload_date}}</p>
   </div>
+  <figcaption>
+    <h3>Ingredia<span>      {{image.name}}</span></h3>
+    <h5>{{image.location}}</h5>
+    <div class="icons"><a href="#"><i class="ion-social-reddit-outline"></i></a><a href="#"> <i class="ion-social-twitter-outline"></i></a><a href="#"> <i class="ion-social-vimeo-outline"></i></a></div><br>
+     <button onclick="myFunction()" class="btn-info">Copy link</button>
+  </figcaption>
+</figure>
 
-
-</body>
+</figure>
 
 <style >
-  body {
+/* Icon set - http://ionicons.com/ */
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+figure.snip1218 {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 220px;
+  max-width: 310px;
   width: 100%;
-  margin: 0;
-  padding: 0;
+  background: #34495e;
+  color: #333;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
 }
-
-#container {
-  width: 680px;
+figure.snip1218 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+figure.snip1218 img {
   max-width: 100%;
-  margin: 10px auto;
-  padding: 0;
-  background: #86F1FF;
-  overflow: hidden;
+  vertical-align: top;
 }
-
-#content {
-  margin: 10px;
-  padding: 0;
-  background: #B8B8B8;
-  overflow: hidden;
-}
-
-.circle {
-  width: 200px;
-  height: 200px;
-  float: left;
-  margin: 10px;
-  padding: 0;
+figure.snip1218 .image {
   position: relative;
-  background: #cccccc;
-  border-radius: 50%;
-  overflow: hidden;
+  border-bottom: 4px solid #34495e;
+  z-index: 1;
 }
-
-.circle .header {
-  width: 200px;
-  height: 100px;
-  top: -100px;
+figure.snip1218 .image:before {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 0 20px;
+  border-color: #34495e transparent transparent transparent;
+  content: '';
   position: absolute;
-  background: rgba(255, 255, 255, 0.75);
-  border-radius: 100px 100px 0 0;
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -15px);
+  transform: translate(-50%, -15px);
+  z-index: -1;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
 }
-
-.circle:hover .header {
-  top: 0;
-  -webkit-box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, .75);
-  box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, .75);
-}
-
-.header h3 {
-  font-size: 20px;
-  text-align: center;
-  margin: 40px 20px 0 20px;
-  padding-bottom: 5px;
-  border-bottom: 3px double #000000;
-}
-
-.circle .text {
-  width: 200px;
-  height: 100px;
-  top: 200px;
+figure.snip1218 .image p {
+  font-weight: 500;
+  margin: 0;
+  padding: 0 30px;
+  line-height: 1.6em;
   position: absolute;
-  background: rgba(255, 255, 255, 0.75);
-  border-radius: 0 0 100px 100px;
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
+  top: 50%;
+  width: 100%;
+  color: #ffffff;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  opacity: 0;
+  font-style: italic;
+}
+figure.snip1218 figcaption {
+  background-color: #ffffff;
+  padding: 25px;
+}
+figure.snip1218 h3 {
+  margin: 0 0 5px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+figure.snip1218 h3 span {
+  font-weight: 800;
+}
+figure.snip1218 h5 {
+  margin: 0 0 15px;
+  font-weight: 400;
+}
+figure.snip1218 i {
+  margin-right: 5px;
+  display: inline-block;
+  font-size: 24px;
+  color: #000000;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  background: white;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+figure.snip1218 i:hover {
+  background-color: #34495e;
+  color: white !important;
+}
+figure.snip1218:hover .image:before,
+figure.snip1218.hover .image:before {
+  border-color: #34495e transparent transparent transparent;
+  -webkit-transform: translate(-50%, 0px);
+  transform: translate(-50%, 0px);
+}
+figure.snip1218:hover .image p,
+figure.snip1218.hover .image p {
+  opacity: 1;
+}
+figure.snip1218:hover img,
+figure.snip1218.hover img {
+  opacity: 0.2;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
-.circle:hover .text {
-  top: 100px;
-  -webkit-box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, .75);
-  box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, .75);
-}
-
-.text p {
-  margin: 10px;
-  text-align: center;
-}
-
-.circle-1 {
-  width: 200px;
-  height: 200px;
-  float: left;
-  margin: 10px;
-  padding: 0;
-  position: relative;
-  background: #cccccc;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.circle-1 .header-1 {
-  width: 100px;
-  height: 200px;
-  top: 0;
-  right: -100px;
-  position: absolute;
-  background: rgba(255, 255, 255, 0.75);
-  border-radius: 0 100px 100px 0;
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
-}
-
-.circle-1:hover .header-1 {
-  right: 0;
-  -webkit-box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, .75);
-  box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, .75);
-}
-
-.header-1 h3 {
-  font-size: 20px;
-  text-align: center;
-  margin: 80px 10px 0 10px;
-}
-
-.circle-1 .text-1 {
-  width: 100px;
-  height: 200px;
-  top: 0px;
-  left: -100px;
-  position: absolute;
-  background: rgba(255, 255, 255, 0.75);
-  border-radius: 100px 0 0 100px;
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
-}
-
-.circle-1:hover .text-1 {
-  left: 0;
-  background: rgba(255, 255, 255, 0.75);
-  -webkit-box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, .75);
-  box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, .75);
-}
-
-.text-1 p {
-  margin: 50px 0 0 0;
-  text-align: center;
-}
-
-.circle-2 {
-  width: 200px;
-  height: 200px;
-  float: left;
-  margin: 10px;
-  padding: 0;
-  position: relative;
-  background: #cccccc;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.circle-2 .text-2 {
-  width: 200px;
-  height: 200px;
-  top: 0;
-  left: 0;
-  position: absolute;
-  background: rgba(255, 255, 255, 0.75);
-  border-radius: 50%;
-  -webkit-transform: scale(0);
-  transform: scale(0);
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
-}
-
-.circle-2:hover .text-2 {
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  background: rgba(255, 255, 255, 0.75);
-  -webkit-box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, .75);
-  box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, .75);
-}
-
-.text-2 h3 {
-  font-size: 20px;
-  text-align: center;
-  margin: 40px 20px 0 20px;
-  padding-bottom: 5px;
-  border-bottom: 3px double #000000;
-}
-
-.text-2 p {
-  margin: 10px 0 0 0;
-  text-align: center;
-}
 </style>
 
 {% endblock %}
