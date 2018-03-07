@@ -1,10 +1,11 @@
 from django.shortcuts import render,HttpResponse
 from .models import Images
+from django.template.context_processors import request
 
 # Create your views here.
-def index (request):
-    images = Images.get_images()
-    return render(request,'index.html',{"images":images})
+def index(request):
+    image = Images.get_images()
+    return render(request,'index.html',{"images":image})
 
 
 def image(request, image_id):
@@ -13,11 +14,11 @@ def image(request, image_id):
 
 
 def search_results(request):
-    if 'images' in request.GET and request.GET['images']:
-        search_term = request.GET.get('images')
-        searched_image = Images.search_by_title(search_term)
+    if 'category' in request.GET and request.GET['category']:
+        search_term = request.GET.get('category')
+        searched_category = Images.search_by_category(search_term)
         message = f"{search_term}"
-        return render(request, 'search.html', {"message":message, "images":searched_image})
+        return render(request, 'search.html', {"message":message, "categories":searched_category})
     else:
-        message = 'You haven\'t searched for any images.'
+        message = 'You haven\'t searched for any category.'
         return render(request, 'search.html', {"message":message})

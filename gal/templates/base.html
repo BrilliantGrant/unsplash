@@ -1,37 +1,31 @@
-{% load bootstrap3%}
+{% load bootstrap3 %}
 {% load static %}
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8"> 
-  {% if title %}
-  <title>Unsplash </title>
-  {% else %}
-  <title> Unsplash</title>
-  {% endif %}
-  {% block styles %}
-  {% bootstrap_css %}
-     <link href="https://fonts.googleapis.com/css?family=Chewy|Monoton|Cabin+Sketch|Concert+One|Arima+Madurai" rel="stylesheet"> 
-  <link rel="stylesheet" href="{% static 'css/gal.css'%}">
- 
-  {% endblock %}
-  
-  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <meta charset="UTF-8">
+
+    {% if title %}
+    <title> Whoops {{title}}</title>
+    {% else %}
+    <title>  Whoops </title>
+    {% endif %}
+
+    {% block styles %}
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% endblock %}
 
 </head>
-
 <body>
-  {% include 'navbar.html' %}
-  {% block scripts %}
-  {%block content %}
-  {% endblock %}
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript">
+    {% include 'navbar.html' %}
+    {% block content %}
+    
+    {% endblock %}
 
-  </script>
-   {% bootstrap_javascript %}
-   {% endblock %}
+    {% block scripts %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        {% bootstrap_javascript %}
+    {% endblock %}
 </body>
-
 </html>

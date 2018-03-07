@@ -1,23 +1,24 @@
 {% extends 'base.html' %}
 {% block content %}
 {{block.super}}
-<div class="container">
-<ul class="nav nav-tabs nav-justified">
-    <li class="active"><a href="#all" data-toggle="tab">Home</a></li>
-    <li><a href="#animal" data-toggle="tab">Animals</a></li>
-    <li><a href="#nature" data-toggle="tab">Nature</a></li>
-    <li><a href="#art" data-toggle="tab">Art</a></li>
-    <li><a href="#architecture" data-toggle="tab">Architecture</a></li>
-    <li><a href="#photography" data-toggle="tab">Photography</a></li>
-</ul>
-<div class="tab-content">
-<div id="all" class="row tab-pane fade in active">
 
+    {% for category in images %}
+        
 
+         <img src="">
+    <div class="col-md-3 col-md-3 col-md-3 col-md-3">
 
-	 
-</div>        
+            <h2>{{category | upper}}</h2>
+          
+                <img src="{{category.image.url}}" class="img-responsive" alt="Image"/>
+         
+            <a href="/image/{{category.id}}">{{category.name}}</a>
+            <p>{{category.upload_date}}</p>
+            {% for location in image_item.location.all %}
+                <p></p>{{location}}
+            {% endfor %}
 
+    </div>
+{% endfor %}
 </div>
-</div>
-{% endblock %}
+{%endblock%}
