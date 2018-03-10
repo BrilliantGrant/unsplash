@@ -21,11 +21,18 @@
     </div>
 {% endfor %}
 </div> -->
+
+<h1 class="section-header" style="color: white; text-align: center;">Video Gallery</h1>
+  <div class="section-header-underline" style="color: white; text-align: center;"></div>
+
+<br>
+
 {% for category in images %}
+
 <div class="col-md-3">
-<d<figure class="snip1369 green" style=" height: 400px">
+<d<figure class="snip1369 green" style=" height: 400px; ">
   <img src="" />
-  <div class="image"><img src="{{category.image.url}}" alt="pr-sample15" class="img-responsive" style="width: 500px; height: 300px" alt="Image"/> /></div>
+  <div class="image"><img src="{{category.image.url}}" alt="pr-sample15" class="img-responsive" style="width: 500px; height: 300px;" alt="Image"/></div>
   <figcaption>
     <h3>{{category.name}}</h3>
 

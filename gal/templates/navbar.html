@@ -1,31 +1,1022 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<nav class="nav" style="margin-top: -15px;">
+        <div class="container">
+            <div class="logo">
+                <a href="#">Your Logo</a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href=""> Whoops</a>
-    </div>
-  </div>
-   <!-- Adding a search form  -->
+    <section class="home">
+    </section>
+    <div style="height: 1000px">
+        <!-- just to make scrolling effect possible -->
+      <!-- <h2 class="myH2">What is this ?</h2>
+      <p class="myP">This is a responsive fixed navbar animated on scroll</p>
+      <p class="myP">I took inspiration from  ABDO STEIF (<a href="https://codepen.io/abdosteif/pen/bRoyMb?editors=1100">https://codepen.io/abdosteif/pen/bRoyMb?editors=1100</a>)
+      and Dicson <a href="https://codepen.io/dicson/pen/waKPgQ">(https://codepen.io/dicson/pen/waKPgQ)</a></p>
+      <p class="myP">I HOPE YOU FIND THIS USEFULL</p>
+      <p class="myP">Albi</p>
+        <p class="myP">
+        
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum ratione facere animi impedit rem labore sint repellendus ipsa sapiente voluptatem aut excepturi quo itaque, ab earum cumque. Voluptatem beatae id inventore quod voluptate qui deserunt, quis placeat, tempora ex totam, dolore sequi harum eos voluptatibus animi labore officiis minus laboriosam
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum ratione facere animi impedit rem labore sint repellendus ipsa sapiente voluptatem aut excepturi quo itaque, ab earum cumque. Voluptatem beatae id inventore quod voluptate qui deserunt, quis placeat, tempora ex totam, dolore sequi harum eos voluptatibus animi labore officiis minus laboriosam
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum ratione facere animi impedit rem labore sint repellendus ipsa sapiente voluptatem aut excepturi quo itaque, ab earum cumque. Voluptatem beatae id inventore quod voluptate qui deserunt, quis placeat, tempora ex totam, dolore sequi harum eos voluptatibus animi labore officiis minus laboriosam
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum ratione facere animi impedit rem labore sint repellendus ipsa sapiente voluptatem aut excepturi quo itaque, ab earum cumque. Voluptatem beatae id inventore quod voluptate qui deserunt, quis placeat, tempora ex totam, dolore sequi harum eos voluptatibus animi labore officiis minus laboriosam
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum ratione facere animi impedit rem labore sint repellendus ipsa sapiente voluptatem aut excepturi quo itaque, ab earum cumque. Voluptatem beatae id inventore quod voluptate qui deserunt, quis placeat, tempora ex totam, dolore sequi harum eos voluptatibus animi labore officiis minus laboriosam
+      </p>
+    </div> -->
+
+<!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+<!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+
+
+
+<ul id="navbar" style="margin-top: -15px;">
+    <li class="active"><a href="/">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Portfolio</a></li>
+    <li><a href="#">Contact</a></li>
+     <!-- Adding a search form  -->
       <div class="col-sm-4 col-md-4 navbar-right">
 
         <form class="navbar-form" role="search" action="{% url 'search_results' %}">
 
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search Image" name="article">
+            <input type="text" class="form-control" placeholder="Search Article" name="article">
             <div class="input-group-btn">
               <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
             </div>
           </div>
 
         </form>
+        <!--The search form above-->
+</ul>
+
+<!-- End NavBar With 3d Transform -->
+
+<!-- <div id="container"> -->
+  <!-- <div id="buttoncon">
+    <div class="text blue">WATER</div>
+    <div class="button b"></div>
   </div>
-</nav>
-</body>
-</html>
+  <div id="buttoncon">
+    <div class="text red">FIRE</div>
+    <div class="button r"></div>
+  </div>
+  <div id="buttoncon">
+    <div class="text green">EARTH</div>
+    <div class="button g"></div>
+  </div>
+  <div id="buttoncon">
+    <div class="text ter">WIND</div>
+    <div class="button t"></div>
+  </div>
+</div> - -->
+
+<!-- <div id="carousel-example-generic" class="carousel slide" data-ride="carousel"> -->
+  <!-- Indicators -->
+ <!--  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol> -->
+
+  <!-- Wrapper for slides -->
+ <!--  <div class="carousel-inner" style="height: 500px; margin-top: 60px " role="listbox">
+    <div class="item active">
+      <img src="https://media.giphy.com/media/l1IYjNqWmvO6LP5OU/giphy.gif" alt="..." class="img-responsive">
+      <div class="carousel-caption">
+        Caption 1
+      </div>
+    </div>
+    <div class="carousel-inner" style="height: 500px; margin-top: 60px " role="listbox">
+    <div class="item active">
+      <img src="https://media.giphy.com/media/l1IYjNqWmvO6LP5OU/giphy.gif" alt="..." class="img-responsive">
+      <div class="carousel-caption">
+        Caption 1
+      </div>
+    </div>
+    <div class="item active">
+      <img src="https://media.giphy.com/media/3ohfFuEm4aNXNNthD2/giphy.gif" alt="..." class="img-responsive">
+      <div class="carousel-caption">
+       caprtion 2
+      </div>
+    </div>
+    
+  </div>
+<div class="item">
+      <img src="https://media.giphy.com/media/3ohfFuEm4aNXNNthD2/giphy.gif" alt="..." class="img-responsive">
+      <div class="carousel-caption">
+       caprtion 2
+      </div>
+    </div>
+    
+  </div> -->
+
+  <!-- Controls
+  <!-- <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"> -->
+  <!--   <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+ -->
+<div style="color: white; text-align: center;">
+ <h1 class="section-header">Video Gallery</h1>
+  <div class="section-header-underline""></div>
+</div>
+<div class="container">
+<div class="row" style=" margin-top: 30px; margin-bottom: 90px">
+  <div class="col-md-4">
+                <div class="embed-responsive embed-responsive-16by9" id="r1" >
+                    <iframe class="embed-responsive-item" style="width: 400px; height: 400px"  src="https://www.youtube.com/embed/O_kZcNoMnrI" width="200px" frameborder="0"></iframe>
+                </div>
+              </div>
+                 <div class="col-md-4">
+                <div class="embed-responsive embed-responsive-16by9" id="r1" >
+                    <iframe class="embed-responsive-item" style="width: 400px; height: 400px"  src="https://www.youtube.com/embed/O_kZcNoMnrI" frameborder="0"></iframe>
+                  </div>
+                </div>
+                 <div class="col-md-4">
+                <div class="embed-responsive embed-responsive-16by9" id="r1" >
+                    <iframe class="embed-responsive-item" style="width: 400px; height: 400px"  src="https://www.youtube.com/embed/O_kZcNoMnrI" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+
+<style >
+.section-header-underline {
+  border: 1px solid white;
+  width: 7rem;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    font-size: 62.5%;
+    font-size: 10px;
+}
+/*-- Inspiration taken from abdo steif -->
+/* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
+
+/* Navbar section */
+
+.nav {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+}
+
+.nav div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 3rem;
+}
+
+.nav div.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.nav div.logo a:hover {
+    color: #00E676;
+}
+
+.nav div.main_list {
+    height: 65px;
+    float: right;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav div.main_list ul li {
+    width: auto;
+    height: 65px;
+    padding: 0;
+    padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 65px;
+    font-size: 2.4rem;
+}
+
+.nav div.main_list ul li a:hover {
+    color: #00E676;
+}
+
+
+/* Home section */
+
+.home {
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://media.giphy.com/media/l1IYjNqWmvO6LP5OU/giphy.gif);
+    background-position: center top;
+  background-size:cover;
+}
+
+.navTrigger {
+    display: none;
+}
+
+.nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+
+/* Media qurey section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .navTrigger {
+        display: block;
+    }
+    .nav div.logo {
+        margin-left: 15px;
+    }
+    .nav div.main_list {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    .nav div.show_list {
+        height: auto;
+        display: none;
+    }
+    .nav div.main_list ul {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #111;
+        /*same background color of navbar*/
+        background-position: center top;
+    }
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: right;
+    }
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+        font-size: 3rem;
+        padding: 20px;
+    }
+    .nav div.media_button {
+        display: block;
+    }
+}
+
+
+/* Animation */
+/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
+
+.navTrigger {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    margin: auto;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    bottom: 0;
+}
+
+.navTrigger i {
+    background-color: #fff;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+}
+
+.navTrigger i:nth-child(1) {
+    -webkit-animation: outT 0.8s backwards;
+    animation: outT 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+    margin: 5px 0;
+    -webkit-animation: outM 0.8s backwards;
+    animation: outM 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+    -webkit-animation: outBtm 0.8s backwards;
+    animation: outBtm 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+    -webkit-animation: inT 0.8s forwards;
+    animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+    -webkit-animation: inM 0.8s forwards;
+    animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+    -webkit-animation: inBtm 0.8s forwards;
+    animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes inM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes outM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes outM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes inT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes inT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes outT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes inBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes inBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes outBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+.affix {
+    padding: 0;
+    background-color: #111;
+}
+
+
+
+
+
+
+.myH2 {
+  text-align:center;
+  font-size: 4rem;
+}
+.myP {
+  text-align: justify;
+  padding-left:15%;
+  padding-right:15%;
+  font-size: 20px;
+}
+@media all and (max-width:700px){
+  .myP {
+    padding:2%;
+  }
+}
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    background-color: lightsteelblue;
+    background-image: url('http://hdw.datawallpaper.com/architecture/vintage-new-york-city-299988.jpg');
+    background-position: center;
+    background-size: cover;
+    -webkit-background-blend-mode: overlay;
+    -moz-background-blend-mode: overlay;
+    background-blend-mode: overlay;
+}
+
+#navbar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: #222;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#navbar li {
+    position: relative;
+    float: left;
+    line-height: 60px;
+    background: inherit;
+    text-align: center;
+    transition: all .2s;
+}
+
+#navbar li a {
+    position: relative;
+    display: block;
+    padding: 0 20px;
+    line-height: inherit;
+    color: white;
+    text-decoration: none;
+}
+
+#navbar li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    width: 60px;
+    height: 60px;
+    background: #222;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    transition: all 0, background .2s;
+}
+#navbar li:hover:before {
+    margin-top: 1px;
+    border-radius: 50% 50% 0 50%;
+    transition: all .1s, background .2s, margin-top .2s cubic-bezier(.5,30,.2,0);
+}
+#navbar li:hover,
+#navbar li:hover:before {
+    background: #3a3a3a;
+}
+#navbar li.active,
+#navbar li.active:before {
+    background: steelblue;
+}
+
+
+
+
+
+/* Start Media Query */
+@media screen and (max-width:680px){
+  nav ul > li:not(:first-child) {
+    display:none
+  }
+  nav ul > li:last-of-type {
+    display: block
+  }
+  nav ul input {
+    display: inline
+  }
+}
+@media screen and (min-width:680px) {
+  nav ul > ol > li {
+    display:none
+  }
+}
+/* End Media Query */
+
+/*.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 70px;
+  margin-bottom: 30px;
+  font: 300 3rem 'Lato', sans-serif;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  color: #222;
+}
+
+.section-header-underline {
+  border: 1px solid #222;
+  width: 7rem;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+*{
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+  padding:0;
+  margin:0
+
+}
+body{
+  background: black;
+  perspective:1000px
+}
+nav{
+  background:black;
+  height: 60px;
+}
+ul{
+  list-style:none;
+  width:700px;
+  margin:0 auto;
+  display:flex
+}
+ul li{
+  width:250px;
+  height:60px;
+  position:relative;
+  -webkit-transform-style:preserve-3d;
+  transform-style:preserve-3d;
+}
+ul li>span{
+  line-height:40px;
+  position: absolute;
+  width:100%;
+  height:100%;
+  border:1px solid #EEEEEE;
+  color: #fff;
+  text-align:center;
+  font-size:19px;
+  font-family:Arial,Tahoma;
+  cursor:pointer
+}
+nav ul li .front{
+  -moz-transform:rotateX(0deg);
+  -webkit-transform:rotateX(0deg);
+  transform:rotateX(0deg);
+  transition:all .5s ease-in-out;
+  -webkit-transform-origin:bottom;
+  -moz-transform-origin:bottom;
+  transform-origin:bottom;
+}
+nav ul li:hover .front{
+  -webkit-transform:rotateX(-270deg);
+  -moz-transform:rotateX(-270deg);
+  transform:rotateX(-270deg);
+  transition:all .5s ease-in-out;
+  background:#222
+}
+nav ul li .back{
+  -webkit-transform:rotateX(90deg);
+  -moz-transform:rotateX(90deg);
+  transform:rotateX(90deg);
+  transition:all .5s ease-in-out;
+  -webkit-transform-origin:top;
+  -moz-transform-origin:top;
+  transform-origin:top;
+  background:#64b0ce
+}
+nav ul li:hover .back{
+  -webkit-transform:rotateX(0deg);
+  -moz-transform:rotateX(0deg);
+  transform:rotateX(0deg);
+  transition:all .5s ease-in-out
+}*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
+html {
+  background-color: rgba(0,0,0,0.98);
+}
+#container {
+  position: absolute;
+  margin-top: -40px;
+  left: 50%;
+  width: 48.8em;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+#buttoncon {
+  width: 12em;
+  -webkit-transition: color 0.4s, margin-top 0.2s;
+  float: left;
+  margin: 0 0.1em 0 0.1em;
+}
+.blue { color: #3498db; }
+.b { background-color: #3498db; }
+.green { color: #27ae60; }
+.g { background-color: #27ae60; }
+.ter { color: #1abc9c; }
+.t { background-color: #1abc9c; }
+.red { color: #c0392b; }
+.r { background-color: #c0392b; }
+.text {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  padding: 0.3em 0 0.3em 0;
+}
+.button {
+  height: 0.3em;
+  width: 12em;
+  position: absolute;
+  -webkit-transition: color 0.4s, margin-top 0.2s;
+}
+#buttoncon:Hover {
+  background-image: url(https://49.media.tumblr.com/71ea4445fc3201799bf5cb24c8699d7c/tumblr_o5bu77xIwh1t1em5uo1_500.gif);
+  background-size: 100% auto;
+  -webkit-transition: color 0.4s, margin-top 0.1s;
+}
+#buttoncon:nth-child(2):Hover {
+  background-image: url(https://media.giphy.com/media/48Eku3umFdppC/giphy.gif);
+}
+#buttoncon:nth-child(3):Hover {
+  background-image: url(https://24.media.tumblr.com/36d8cba6857b8782bd020ed00eae429d/tumblr_mw4bhtncwC1qedf7ko1_500.gif);
+}
+#buttoncon:nth-child(4):Hover {
+  background-image: url(https://s32.postimg.org/ylklk01lf/mds_O8zd.gif);
+}
+#buttoncon:Hover .button {
+  -webkit-transition: color 0.4s, margin-top 0.1s;
+  margin-top: -2.45em;
+}
+#buttoncon:Hover .text {
+  color: white;
+}
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+.carousel {
+    background:#1A237E;
+}
+.carousel .item {
+  height: 300px;
+}
+.item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+ 
+    min-height: 300px;
+}
+.black{
+   color: #000;
+}
+
+@font-face {
+  font-family: 'sansationregular';
+    src: url('sansation_regular-webfont.eot');
+    src: url('sansation_regular-webfont.eot?#iefix') format('embedded-opentype'),
+      url('sansation_regular-webfont.woff') format('woff'),
+      url('sansation_regular-webfont.ttf') format('truetype'),
+      url('sansation_regular-webfont.svg#sansationregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+body {
+  background-color:#edecec;
+}
+.nav-menu {
+  display: block;
+  background: #74adaa;
+  width:1050px;
+  margin: 50px auto 150px;
+}
+
+.nav-menu > li {
+  display: inline;
+  float:left;     
+  border-right:1px solid #94c0be;
+}
+.nav-menu > li:last-child {
+  border-right: none;
+}
+.nav-menu li a {
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  font-family: 'sansationregular';
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-transform: capitalize;
+  overflow: visible;
+  line-height: 20px;
+  font-size: 20px;
+  padding: 15px 30px 15px 31px;     
+}
+
+/*/* animation domination */
+.three-d {
+  perspective: 200px;
+  transition: all .07s linear;
+  position: relative;
+}
+
+.three-d:not(.active):hover {
+  cursor: pointer;
+}
+
+.three-d:not(.active):hover .three-d-box, 
+.three-d:not(.active):focus .three-d-box {
+  transform: translateZ(-25px) rotateX(90deg);
+}
+
+.three-d-box {
+  transition: all .3s ease-out;
+  transform: translatez(-25px);
+  transform-style: preserve-3d;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.front {
+  transform: rotatex(0deg) translatez(25px);
+}
+
+.back {
+  transform: rotatex(-90deg) translatez(25px);
+  color: #FFE7C4;
+}
+
+.front, .back {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #74adaa;
+  padding: 15px 30px 15px 31px; 
+  color: white;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+.nav-menu li .active .front,
+.nav-menu li .active .back,
+.nav-menu li a:hover .front,
+.nav-menu li a:hover .back {
+  background-color: #51938f;
+  background-size: 5px 5px;
+  background-position: 0 0, 30px 30px;
+  background-image: -*-linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480), linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480);
+}
+.nav-menu ul {
+  position: absolute;
+  text-align: left;
+  line-height: 40px;
+  font-size: 14px;
+  width: 200px;
+  transition: all 0.3s ease-in;
+  transform-origin: 0px 0px;
+  transform: rotateX(-90deg);
+  backface-visibility: hidden;
+}
+.nav-menu > li:hover ul {
+  display: block;
+  transform: rotateX(0deg);
+}
+  img{
+  width:100%;
+  max-width:100%;
+}
+
+.navbar{
+  position:fixed;
+  width:100%;
+  background-color:#fff;
+  z-index:10;
+  border-radius:0;
+  border-color:transparent;
+}
+.navbar-default .navbar-nav > li > a{
+  color:#000;
+  
+}*/
+</style>
+<script >
+ // Declare global variables
+var nextSect = $( "#section-two" ),
+navHeight = $( "nav").height(),
+previousScroll = 0;
+
+$(window).scroll(function() {
+  
+    // declare function variable
+    var currentScroll = $(this).scrollTop();
+  
+    // Detect when scroll passes home section minus nav height, make nav sticky
+    if ($(window).scrollTop() > nextSect.position().top - navHeight) {
+      $('nav').removeClass("nav-bottom");
+      $('nav').addClass("nav-sticky");
+      
+      // past home section, scroll direction affects navbar appearance
+      if (currentScroll > previousScroll) {
+        $('nav').fadeOut(1200);
+      } else {
+        $('nav').fadeIn('slow');
+      }
+    } else {
+      $('nav').removeClass("nav-sticky");
+      $('nav').addClass("nav-bottom");
+    }
+    previousScroll = currentScroll;
+
+});
+
+$(function() {
+  var ulLi = $('nav ul > li'),
+      fa = $('nav ul > li:last-of-type a .fa');
+  
+   $('nav ul').append('<ol></ol>');
+  
+   $('nav').each(function() {
+     for (var i=0; i <= ulLi.length - 3; i++) {
+       $('nav ul > ol').append("<li>"+ i +"</li>");
+       $('nav ul > ol > li').eq(i).html(ulLi.eq(i+1).html());
+     }
+  });
+
+  $('nav ul > li:last-of-type').on('click', function() {
+    fa.toggleClass('fa-bars');
+    fa.toggleClass('fa-times');
+    $(this).parent().children('ol').slideToggle(500);
+  });
+});
+
+// Em An
+// 10/10/2016
+// https://codepen.io/anon/pen/qaoxyA  
+// https://codepen.io/Em-An/pen/LRdjwp
+
+
+$('.navTrigger').click(function () {
+    $(this).toggleClass('active');
+    console.log("Clicked menu");
+    $("#mainListDiv").toggleClass("show_list");
+    $("#mainListDiv").fadeIn();
+
+});
+
+
+</script>
