@@ -23,18 +23,23 @@
 
 <body> -->
 
- 
 
-<figure class="snip1218">
-  <div class="image"><img src="{{image.image.url}}" class="img-responsive" style="width: 520px; height: 520px"  alt="sample70"/>
+<figure class="snip1218" style="margin-top: -500px; margin-left: 200px ">
+   <h1 class="section-header" style="color: white; text-align: center; margin-top: -0px">Photo Gallery</h1>
+  <div class="section-header-underline" style="color: white; text-align: center;"></div>
+
+  <div class="image"><img src="{{image.image.url}}" class="img-responsive" style="width: 920px; height: 520px"  alt="sample70"/> 
+<div style="color: white">
+   Description
+  </div>
     <p>{{image.descripton}}</p>
-    <p>{{image.upload_date}}</p>
+    
   </div>
   <figcaption>
     <h3>Ingredia<span>      {{image.name}}</span></h3>
-    <h5 style="color: black">{{image.location}}</h5>
-    <div class="icons"><a href="#"><i class="ion-social-reddit-outline"></i></a><a href="#"> <i class="ion-social-twitter-outline"></i></a><a href="#"> <i class="ion-social-vimeo-outline"></i></a></div><br>
-     <button onclick="myFunction()" class="btn-info">Copy link</button>
+    <h5 style="color: black">{{image.location}}</h5>  <p>{{image.time}}</p>
+    <div class="icons"><a href="https://www.facebook.com/BriKaimba"><i class="ion-social-reddit-outline"></i></a><a href="https://www.twitter.com/@BriKaimba"> <i class="ion-social-twitter-outline"></i></a><a href="https://www.facebook.com/BriKaimba"> <i class="ion-social-vimeo-outline"></i></a></div><br>
+     <button onclick="myFunction()" class="btn-info" style="border-radius: 30%; background-color: #031428">Copy link</button>
   </figcaption>
 </figure>
 
@@ -50,7 +55,7 @@ figure.snip1218 {
   float: left;
   overflow: hidden;
   margin: 10px 1%;
-  min-width: 520px;
+  min-width: 920px;
   max-width: 310px;
   width: 100%;
   background: #34495e;
