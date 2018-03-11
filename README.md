@@ -4,7 +4,7 @@ This application was built by Django version 1.11 a python framework
 
 Unsplash an application that you display your photos for others to see.
 
-#### 12rd March 2018
+#### 12th March 2018
 
 #### By Brilliant Kaimba briegrant416@gmail.com
 
@@ -37,16 +37,18 @@ As a user of the application i should be able to:
 
 ```$ pip install django==1.11```
 
+* Create a virtual environment
+
+ `sudo apt-get install python3.6-venv`
+
+ ```$ python3.6 -m venv virtual```
+
+```$ source virtual/bin/activate```
+
 * Install python version 3.6.3
 * Install gunicorn: (virtual)$ python3.6 -m pip install gunicorn
 * Install Heroku that helps to deploy your application.
 * Clone https://github.com/BrilliantGrant/unsplash.git
-* Create a virtual environment
-
- `sudo apt-get install python3.6-venv`
- ```$ python3.6 -m venv virtual```
-```$ source virtual/bin/activate```
-
 * Atleast have a computer or a laptop
 * Have an internet connection
 * Visit  https://bri-gallery.herokuapp.com/
