@@ -35,18 +35,21 @@ As a user of the application i should be able to:
 
 * install Django
 
-```$ pip install django==1.11```
+   ```$ pip install django==1.11```
 
 * Create a virtual environment
 
- `sudo apt-get install python3.6-venv`
+   `sudo apt-get install python3.6-venv`
 
- ```$ python3.6 -m venv virtual```
+   ```$ python3.6 -m venv virtual```
 
-```$ source virtual/bin/activate```
+   ```$ source virtual/bin/activate```
+
+* Install gunicorn: (virtual)
+
+   ```$ python3.6 -m pip install gunicorn```
 
 * Install python version 3.6.3
-* Install gunicorn: (virtual)$ python3.6 -m pip install gunicorn
 * Install Heroku that helps to deploy your application.
 * Clone https://github.com/BrilliantGrant/unsplash.git
 * Atleast have a computer or a laptop
