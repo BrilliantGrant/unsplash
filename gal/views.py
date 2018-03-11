@@ -5,7 +5,7 @@ from django.template.context_processors import request
 # Create your views here.
 def index(request):
     image = Images.get_images()
-    return render(request,'index.html',{"images":image})
+    return render(request,'index.html',{"image":image})
 
 
 def image(request, image_id):
