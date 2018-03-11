@@ -50,3 +50,14 @@ As a user of the application i should be able to:
 * Atleast have a computer or a laptop
 * Have an internet connection
 * Visit  https://bri-gallery.herokuapp.com/
+
+## Technologies Used
+
+  * Python version 3.6.3
+  * Django version 1.11
+  * Bootstrap 3
+  * Postgres Database
+  * Sqlite
+  * HTML & CSS 
+  * Heroku
+
