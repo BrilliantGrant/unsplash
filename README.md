@@ -30,3 +30,23 @@ As a user of the application i should be able to:
 | Display full image | **Click on an image** | Directed to a page displaying the full image |
 | Copy an image's link | **Click** copy image link button | Display modal with image url and link for the image |
 
+
+## Setup/Installation Requirements
+
+* install Django
+
+```$ pip install django==1.11```
+
+* Install python version 3.6.3
+* Install gunicorn: (virtual)$ python3.6 -m pip install gunicorn
+* Install Heroku that helps to deploy your application.
+* Clone https://github.com/BrilliantGrant/unsplash.git
+* Create a virtual environment
+
+ `sudo apt-get install python3.6-venv`
+ ```$ python3.6 -m venv virtual```
+```$ source virtual/bin/activate```
+
+* Atleast have a computer or a laptop
+* Have an internet connection
+* Visit  https://bri-gallery.herokuapp.com/
