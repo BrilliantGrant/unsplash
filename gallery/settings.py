@@ -29,7 +29,7 @@ SECRET_KEY = '53_-0e7v#ka2aemd2_$_zn*cesqmvas#8((bb042mnq_kqym(i'
 DEBUG = True
 # DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
