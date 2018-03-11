@@ -10,7 +10,7 @@ Unsplash an application that you display your photos for others to see.
 
 ### Description
 
-Unsplash is an application that you display your photos for others to see.
+Unsplash is an application that lets you display your photos for others to see.
 
 ## User Stories
 
@@ -39,7 +39,7 @@ As a user of the application i should be able to:
 
 * Create a virtual environment
 
-   `sudo apt-get install python3.6-venv`
+   `$ sudo apt-get install python3.6-venv`
 
    ```$ python3.6 -m venv virtual```
 
