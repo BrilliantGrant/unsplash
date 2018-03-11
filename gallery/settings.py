@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'gal.apps.GalConfig',
     'bootstrap3',
-    'inst'
+    'gal'
 ]
 
 MIDDLEWARE = [
